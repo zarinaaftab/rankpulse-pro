@@ -1,0 +1,1407 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RankPulse Pro - Professional SEO Suite & Analyzer</title>
+    <meta name="description" content="RankPulse Pro is the all-in-one professional SEO suite empowering marketers with keyword density analysis, meta tag generators, readability scores, and technical audit simulators.">
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="RankPulse Pro - Professional SEO Suite & Analyzer">
+    <meta property="og:description" content="All-in-one professional SEO suite for keyword analysis, meta tags, and site health simulations.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rankpulse.pro/">
+    <meta property="og:image" content="https://placehold.co/1200x630/4f46e5/ffffff?text=RankPulse+Pro+SEO+Suite">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="RankPulse Pro - Professional SEO Suite">
+    <meta name="twitter:description" content="Advanced keyword analysis, meta tag generators, and technical SEO tools.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eef2ff',
+                            100: '#e0e7ff',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                            900: '#312e81'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; height: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 9999px; }
+        .dark .custom-scrollbar::-webkit-scrollbar-thumb { background: #475569; }
+    </style>
+    <!-- JSON-LD Schema Markup -->
+    <script type="application/ld+json" id="jsonLdSchema">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "RankPulse Pro",
+        "operatingSystem": "All",
+        "applicationCategory": "SEOApplication",
+        "description": "Professional all-in-one SEO suite for keyword density analysis, meta tag generation, readability scoring, and site audit simulations.",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300 min-h-screen flex flex-col justify-between">
+
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-white/80 dark:bg-slate-900/80 border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="#/" class="flex items-center space-x-3 group">
+                <div class="h-10 w-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-violet-500 flex items-center justify-center text-white shadow-lg shadow-indigo-500/30 group-hover:scale-105 transition-transform">
+                    <i data-lucide="activity" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <span class="text-xl font-bold tracking-tight bg-gradient-to-r from-indigo-600 to-violet-500 bg-clip-text text-transparent">RankPulse</span>
+                    <span class="text-xs uppercase px-1.5 py-0.5 ml-1 bg-indigo-100 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 font-semibold rounded">Pro</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links with Real Hash URLs -->
+            <nav class="hidden md:flex items-center space-x-1">
+                <a href="#/keyword-density-checker" class="nav-link px-3 py-2 rounded-lg text-sm font-medium transition-all text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white flex items-center space-x-2" data-route="keyword-density-checker">
+                    <i data-lucide="bar-chart-2" class="w-4 h-4"></i>
+                    <span>Keyword Density</span>
+                </a>
+                <a href="#/meta-tag-generator" class="nav-link px-3 py-2 rounded-lg text-sm font-medium transition-all text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white flex items-center space-x-2" data-route="meta-tag-generator">
+                    <i data-lucide="code" class="w-4 h-4"></i>
+                    <span>Meta Generator</span>
+                </a>
+                <a href="#/readability-checker" class="nav-link px-3 py-2 rounded-lg text-sm font-medium transition-all text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white flex items-center space-x-2" data-route="readability-checker">
+                    <i data-lucide="book-open" class="w-4 h-4"></i>
+                    <span>Readability</span>
+                </a>
+                <a href="#/site-audit-simulator" class="nav-link px-3 py-2 rounded-lg text-sm font-medium transition-all text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white flex items-center space-x-2" data-route="site-audit-simulator">
+                    <i data-lucide="shield-check" class="w-4 h-4"></i>
+                    <span>Site Audit Simulator</span>
+                </a>
+                <a href="#/guides" class="nav-link px-3 py-2 rounded-lg text-sm font-medium transition-all text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white flex items-center space-x-2" data-route="guides">
+                    <i data-lucide="book" class="w-4 h-4"></i>
+                    <span>SEO Guides</span>
+                </a>
+            </nav>
+
+            <div class="flex items-center space-x-3">
+                <button onclick="toggleDarkMode()" aria-label="Toggle Theme" class="p-2 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                    <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
+                    <i data-lucide="moon" class="w-5 h-5 block dark:hidden"></i>
+                </button>
+                <button onclick="openExportModal()" class="hidden sm:inline-flex items-center space-x-2 px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium shadow-md shadow-indigo-500/25 transition-all">
+                    <i data-lucide="download" class="w-4 h-4"></i>
+                    <span>Export Report</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Selector -->
+    <div class="md:hidden max-w-7xl mx-auto px-4 w-full pt-4">
+        <select id="mobileNavSelect" onchange="window.location.hash = this.value" class="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-3 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-indigo-500 shadow-sm">
+            <option value="/">Home Dashboard</option>
+            <option value="/keyword-density-checker">Keyword Density Checker</option>
+            <option value="/meta-tag-generator">Meta Tag Generator & Analyzer</option>
+            <option value="/readability-checker">Readability & Word Count</option>
+            <option value="/site-audit-simulator">SEO Site Audit Simulator</option>
+            <option value="/guides">SEO Guides & Best Practices</option>
+            <option value="/about">About RankPulse</option>
+            <option value="/contact">Contact Support</option>
+            <option value="/privacy">Privacy Policy</option>
+            <option value="/terms">Terms of Service</option>
+        </select>
+    </div>
+
+    <!-- Main Content Dynamic Views -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8" id="mainViewContainer">
+        <!-- Views will be dynamically injected here via router -->
+    </main>
+
+    <!-- Export Report Modal -->
+    <div id="exportModal" class="fixed inset-0 z-50 bg-slate-950/60 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 max-w-md w-full p-6 shadow-2xl space-y-4">
+            <div class="flex items-center justify-between">
+                <h3 class="text-lg font-bold flex items-center space-x-2">
+                    <i data-lucide="download" class="w-5 h-5 text-indigo-500"></i>
+                    <span>Export SEO Audit Report</span>
+                </h3>
+                <button onclick="closeExportModal()" class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            <p class="text-xs text-slate-500">Choose your preferred format to export your current keyword density and SEO metrics report.</p>
+            
+            <div class="space-y-3 pt-2">
+                <button onclick="exportReportFile('csv')" class="w-full p-4 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-indigo-500 dark:hover:border-indigo-500 bg-slate-50 dark:bg-slate-950 flex items-center justify-between transition-all group">
+                    <div class="flex items-center space-x-3">
+                        <div class="h-10 w-10 rounded-xl bg-emerald-50 dark:bg-emerald-950 text-emerald-600 flex items-center justify-center">
+                            <i data-lucide="file-spreadsheet" class="w-5 h-5"></i>
+                        </div>
+                        <div class="text-left">
+                            <h4 class="text-sm font-semibold group-hover:text-indigo-600 transition-colors">Export as CSV</h4>
+                            <p class="text-xs text-slate-500">Spreadsheet compatible format</p>
+                        </div>
+                    </div>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+                </button>
+
+                <button onclick="exportReportFile('pdf')" class="w-full p-4 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-indigo-500 dark:hover:border-indigo-500 bg-slate-50 dark:bg-slate-950 flex items-center justify-between transition-all group">
+                    <div class="flex items-center space-x-3">
+                        <div class="h-10 w-10 rounded-xl bg-rose-50 dark:bg-rose-950 text-rose-600 flex items-center justify-center">
+                            <i data-lucide="file-text" class="w-5 h-5"></i>
+                        </div>
+                        <div class="text-left">
+                            <h4 class="text-sm font-semibold group-hover:text-indigo-600 transition-colors">Export as PDF Mockup</h4>
+                            <p class="text-xs text-slate-500">Professional executive summary</p>
+                        </div>
+                    </div>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="toastNotification" class="fixed bottom-6 right-6 z-50 bg-slate-900 text-white px-4 py-3 rounded-xl shadow-2xl flex items-center space-x-3 transform translate-y-20 opacity-0 transition-all duration-300">
+        <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-400 flex-shrink-0"></i>
+        <span id="toastMessage" class="text-sm font-medium">Action completed successfully.</span>
+    </div>
+
+    <!-- Professional Multi-Column Footer -->
+    <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 pt-16 pb-12 mt-16 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-200 dark:border-slate-800">
+                
+                <!-- Brand & Newsletter Column -->
+                <div class="lg:col-span-2 space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="h-10 w-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-violet-500 flex items-center justify-center text-white shadow-lg shadow-indigo-500/30">
+                            <i data-lucide="activity" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <span class="text-xl font-bold tracking-tight bg-gradient-to-r from-indigo-600 to-violet-500 bg-clip-text text-transparent">RankPulse</span>
+                            <span class="text-xs uppercase px-1.5 py-0.5 ml-1 bg-indigo-100 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 font-semibold rounded">Pro</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-500 dark:text-slate-400 max-w-sm leading-relaxed">
+                        The all-in-one professional SEO suite empowering marketers, agencies, and creators to dominate search engine rankings with data-driven keyword and technical analysis.
+                    </p>
+
+                    <!-- Newsletter Form -->
+                    <div class="pt-2">
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">Subscribe to SEO Weekly Insights</label>
+                        <form onsubmit="handleNewsletterSubmit(event)" class="flex gap-2">
+                            <input type="email" required placeholder="Enter your work email" class="bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-2.5 text-sm flex-grow focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                            <button type="submit" class="px-4 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium shadow-md shadow-indigo-500/25 transition-all flex-shrink-0">
+                                Subscribe
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Product Links -->
+                <div class="space-y-4">
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-white">Product</h4>
+                    <ul class="space-y-2.5 text-sm text-slate-600 dark:text-slate-400">
+                        <li><a href="#/keyword-density-checker" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Keyword Density Checker</a></li>
+                        <li><a href="#/meta-tag-generator" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Meta Tag Generator</a></li>
+                        <li><a href="#/readability-checker" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Readability Analyzer</a></li>
+                        <li><a href="#/site-audit-simulator" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Site Audit Simulator</a></li>
+                        <li><a href="#/guides" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">SEO Guides & Tutorials</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources Links -->
+                <div class="space-y-4">
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-white">Resources</h4>
+                    <ul class="space-y-2.5 text-sm text-slate-600 dark:text-slate-400">
+                        <li><a href="#/guides/semantic-search" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Semantic Search & NLP</a></li>
+                        <li><a href="#/guides/on-page-best-practices" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">On-Page SEO Best Practices</a></li>
+                        <li><a href="#/guides/avoiding-keyword-stuffing" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Keyword Analysis Ethics</a></li>
+                        <li><a href="#/about" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">About RankPulse</a></li>
+                        <li><a href="#/contact" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Support & FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company & Legal Links -->
+                <div class="space-y-4">
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-white">Company & Legal</h4>
+                    <ul class="space-y-2.5 text-sm text-slate-600 dark:text-slate-400">
+                        <li><a href="#/about" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">About Us</a></li>
+                        <li><a href="#/contact" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Contact Us</a></li>
+                        <li><a href="#/privacy" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Privacy Policy</a></li>
+                        <li><a href="#/terms" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Bottom Row: Copyright, Socials, and Operational Status -->
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+                <div class="text-xs text-slate-500 dark:text-slate-400">
+                    &copy; 2026 RankPulse Technologies Inc. All rights reserved.
+                </div>
+
+                <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-200 dark:border-emerald-900 text-xs text-emerald-700 dark:text-emerald-400 font-medium">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    <span>All Systems Operational (99.98% Uptime)</span>
+                </div>
+
+                <div class="flex items-center space-x-4 text-slate-400">
+                    <a href="#" aria-label="Twitter" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+                    <a href="#" aria-label="Github" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"><i data-lucide="github" class="w-5 h-5"></i></a>
+                    <a href="#" aria-label="Linkedin" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                    <a href="#" aria-label="Globe" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"><i data-lucide="globe" class="w-5 h-5"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Application Logic & Multi-Page Router Script -->
+    <script>
+        // Stop words list for keyword analyzer
+        const stopWords = new Set([
+            'i', 'me', 'my', 'myself', 'we', 'our', 'ours', 'ourselves', 'you', 'your', 'yours', 'yourself', 'yourselves', 'he', 'him', 'his', 'himself', 'she', 'her', 'hers', 'herself', 'it', 'its', 'itself', 'they', 'them', 'their', 'theirs', 'themselves', 'what', 'which', 'who', 'whom', 'this', 'that', 'these', 'those', 'am', 'is', 'are', 'was', 'were', 'be', 'been', 'being', 'have', 'has', 'had', 'having', 'do', 'does', 'did', 'doing', 'a', 'an', 'the', 'and', 'but', 'if', 'or', 'because', 'as', 'until', 'while', 'of', 'at', 'by', 'for', 'with', 'about', 'against', 'between', 'into', 'through', 'during', 'before', 'after', 'above', 'below', 'to', 'from', 'up', 'down', 'in', 'out', 'on', 'off', 'over', 'under', 'again', 'further', 'then', 'once', 'here', 'there', 'when', 'where', 'why', 'how', 'all', 'any', 'both', 'each', 'few', 'more', 'most', 'other', 'some', 'such', 'no', 'nor', 'not', 'only', 'own', 'same', 'so', 'than', 'too', 'very', 's', 't', 'can', 'will', 'just', 'don', 'should', 'now'
+        ]);
+
+        let currentPhraseLength = 1;
+        let analysisData = [];
+
+        // Dark Mode Toggle
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark');
+        }
+
+        // Router & View Templates
+        const routes = {
+            '/': {
+                title: 'RankPulse Pro - Professional SEO Suite & Keyword Analyzer',
+                description: 'The all-in-one professional SEO suite empowering marketers, agencies, and creators to dominate search engine rankings.',
+                schema: {
+                    "@context": "https://schema.org",
+                    "@type": "SoftwareApplication",
+                    "name": "RankPulse Pro",
+                    "applicationCategory": "SEOApplication",
+                    "operatingSystem": "All",
+                    "description": "Professional all-in-one SEO suite for keyword density analysis, meta tag generation, readability scoring, and site audit simulations."
+                },
+                render: () => `
+                    <div class="space-y-12">
+                        <!-- Hero Section -->
+                        <div class="bg-gradient-to-r from-indigo-900 via-indigo-800 to-violet-900 rounded-3xl p-8 sm:p-12 text-white shadow-2xl relative overflow-hidden">
+                            <div class="absolute -right-10 -bottom-10 opacity-10">
+                                <i data-lucide="activity" class="w-80 h-80"></i>
+                            </div>
+                            <div class="relative z-10 max-w-3xl space-y-6">
+                                <span class="px-3 py-1 bg-white/15 backdrop-blur-md rounded-full text-xs font-semibold uppercase tracking-wider text-indigo-200">Professional SEO Suite</span>
+                                <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight">Elevate Your Search Rankings & Technical Health</h1>
+                                <p class="text-indigo-100 text-base sm:text-lg leading-relaxed">
+                                    Analyze exact term frequencies, craft optimized meta snippets, evaluate readability levels, and run comprehensive technical site audits with enterprise precision.
+                                </p>
+                                <div class="flex flex-wrap gap-4 pt-4">
+                                    <a href="#/keyword-density-checker" class="px-6 py-3.5 rounded-xl bg-white text-indigo-900 font-semibold text-sm shadow-lg hover:bg-indigo-50 transition-all flex items-center space-x-2">
+                                        <i data-lucide="bar-chart-2" class="w-4 h-4 text-indigo-600"></i>
+                                        <span>Keyword Density Checker</span>
+                                    </a>
+                                    <a href="#/site-audit-simulator" class="px-6 py-3.5 rounded-xl bg-indigo-600/50 hover:bg-indigo-600 text-white font-semibold text-sm backdrop-blur-md border border-white/20 transition-all flex items-center space-x-2">
+                                        <i data-lucide="shield-check" class="w-4 h-4"></i>
+                                        <span>Run Site Audit Simulator</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Feature Grid Cards -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <a href="#/keyword-density-checker" class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm hover:border-indigo-500 transition-all group">
+                                <div class="h-12 w-12 rounded-xl bg-indigo-50 dark:bg-indigo-950 text-indigo-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                                    <i data-lucide="bar-chart-2" class="w-6 h-6"></i>
+                                </div>
+                                <h3 class="text-lg font-bold mb-2">Keyword Density Analyzer</h3>
+                                <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Inspect 1-word, 2-word, and 3-word phrase frequencies to align with modern semantic search context.</p>
+                            </a>
+
+                            <a href="#/meta-tag-generator" class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm hover:border-indigo-500 transition-all group">
+                                <div class="h-12 w-12 rounded-xl bg-violet-50 dark:bg-violet-950 text-violet-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                                    <i data-lucide="code" class="w-6 h-6"></i>
+                                </div>
+                                <h3 class="text-lg font-bold mb-2">Meta Tag Generator</h3>
+                                <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Craft click-worthy title tags and meta descriptions with live Google search snippet previews.</p>
+                            </a>
+
+                            <a href="#/readability-checker" class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm hover:border-indigo-500 transition-all group">
+                                <div class="h-12 w-12 rounded-xl bg-emerald-50 dark:bg-emerald-950 text-emerald-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                                    <i data-lucide="book-open" class="w-6 h-6"></i>
+                                </div>
+                                <h3 class="text-lg font-bold mb-2">Readability & Metrics</h3>
+                                <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Evaluate Flesch Reading Ease scores, sentence lengths, and syllable distribution.</p>
+                            </a>
+
+                            <a href="#/site-audit-simulator" class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm hover:border-indigo-500 transition-all group">
+                                <div class="h-12 w-12 rounded-xl bg-blue-50 dark:bg-blue-950 text-blue-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                                    <i data-lucide="shield-check" class="w-6 h-6"></i>
+                                </div>
+                                <h3 class="text-lg font-bold mb-2">SEO Site Audit Simulator</h3>
+                                <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Simulate crawling URLs to check technical health, response speeds, and security directives.</p>
+                            </a>
+
+                            <a href="#/guides" class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm hover:border-indigo-500 transition-all group">
+                                <div class="h-12 w-12 rounded-xl bg-amber-50 dark:bg-amber-950 text-amber-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                                    <i data-lucide="book" class="w-6 h-6"></i>
+                                </div>
+                                <h3 class="text-lg font-bold mb-2">Professional SEO Guides</h3>
+                                <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Master organic search engine algorithms with expert tutorials and best practices.</p>
+                            </a>
+
+                            <a href="#/about" class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm hover:border-indigo-500 transition-all group">
+                                <div class="h-12 w-12 rounded-xl bg-rose-50 dark:bg-rose-950 text-rose-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                                    <i data-lucide="info" class="w-6 h-6"></i>
+                                </div>
+                                <h3 class="text-lg font-bold mb-2">About RankPulse</h3>
+                                <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Discover our mission to build transparent, powerful, and accessible SEO tools for everyone.</p>
+                            </a>
+                        </div>
+                    </div>
+                `
+            },
+            '/keyword-density-checker': {
+                title: 'Keyword Density Analyzer & Checker | RankPulse Pro',
+                description: 'Analyze exact term frequencies, phrase clustering, and semantic context to optimize your content without over-optimization penalties.',
+                schema: {
+                    "@context": "https://schema.org",
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [
+                        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://rankpulse.pro/#/" },
+                        { "@type": "ListItem", "position": 2, "name": "Keyword Density Checker", "item": "https://rankpulse.pro/#/keyword-density-checker" }
+                    ]
+                },
+                render: () => `
+                    <div class="space-y-6">
+                        <!-- Breadcrumbs -->
+                        <nav class="flex text-xs text-slate-500 space-x-2">
+                            <a href="#/" class="hover:underline">Home</a>
+                            <span>/</span>
+                            <span class="text-indigo-600 dark:text-indigo-400 font-medium">Keyword Density Checker</span>
+                        </nav>
+
+                        <div class="bg-gradient-to-r from-indigo-900 via-indigo-800 to-violet-900 rounded-2xl p-6 sm:p-8 text-white shadow-xl relative overflow-hidden">
+                            <div class="absolute -right-10 -bottom-10 opacity-10">
+                                <i data-lucide="bar-chart-2" class="w-64 h-64"></i>
+                            </div>
+                            <div class="relative z-10 max-w-2xl">
+                                <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight mb-2">Advanced Keyword Density Analyzer</h1>
+                                <p class="text-indigo-200 text-sm sm:text-base mb-6">Paste your article text below to inspect term frequencies and 1-3 word phrase clustering. Note: Modern search engines rely on semantic context and entity analysis rather than strict mathematical percentages.</p>
+                                <div class="flex flex-wrap gap-3">
+                                    <button onclick="loadSampleText()" class="px-3.5 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-xs sm:text-sm font-medium backdrop-blur-md transition-all flex items-center space-x-2">
+                                        <i data-lucide="file-text" class="w-4 h-4"></i>
+                                        <span>Load Sample SEO Text</span>
+                                    </button>
+                                    <button onclick="clearDensityTool()" class="px-3.5 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-xs sm:text-sm font-medium backdrop-blur-md transition-all flex items-center space-x-2">
+                                        <i data-lucide="trash-2" class="w-4 h-4"></i>
+                                        <span>Clear Input</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Input & Configuration Card -->
+                        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                            <div class="lg:col-span-2 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm flex flex-col">
+                                <div class="flex items-center justify-between mb-4">
+                                    <label for="densityInputText" class="text-sm font-semibold flex items-center space-x-2">
+                                        <i data-lucide="edit-3" class="w-4 h-4 text-indigo-500"></i>
+                                        <span>Content Input</span>
+                                    </label>
+                                    <span id="liveWordCountBadge" class="text-xs font-medium px-2.5 py-1 bg-slate-100 dark:bg-slate-800 rounded-full text-slate-600 dark:text-slate-400">0 words</span>
+                                </div>
+                                <textarea id="densityInputText" rows="10" oninput="analyzeKeywordDensity()" placeholder="Paste your article, blog post, or webpage copy here..." class="w-full flex-grow bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl p-4 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 custom-scrollbar resize-y"></textarea>
+                                
+                                <div class="mt-4 flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-slate-100 dark:border-slate-800">
+                                    <label class="flex items-center space-x-2 text-xs font-medium cursor-pointer">
+                                        <input type="checkbox" id="filterStopWords" checked onchange="analyzeKeywordDensity()" class="rounded text-indigo-600 focus:ring-indigo-500 w-4 h-4">
+                                        <span>Filter Stop Words (the, and, is, etc.)</span>
+                                    </label>
+                                    <button onclick="analyzeKeywordDensity()" class="px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-medium text-sm shadow-lg shadow-indigo-500/25 transition-all flex items-center space-x-2">
+                                        <i data-lucide="search" class="w-4 h-4"></i>
+                                        <span>Analyze Density</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Quick Stats Sidebar -->
+                            <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm flex flex-col justify-between">
+                                <div>
+                                    <h3 class="text-base font-bold mb-4 flex items-center space-x-2">
+                                        <i data-lucide="pie-chart" class="w-5 h-5 text-indigo-500"></i>
+                                        <span>Text Metrics Summary</span>
+                                    </h3>
+                                    <div class="space-y-4">
+                                        <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-100 dark:border-slate-800 flex items-center justify-between">
+                                            <span class="text-xs font-medium text-slate-500">Total Words</span>
+                                            <span id="statTotalWords" class="text-lg font-bold">0</span>
+                                        </div>
+                                        <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-100 dark:border-slate-800 flex items-center justify-between">
+                                            <span class="text-xs font-medium text-slate-500">Unique Words</span>
+                                            <span id="statUniqueWords" class="text-lg font-bold">0</span>
+                                        </div>
+                                        <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-100 dark:border-slate-800 flex items-center justify-between">
+                                            <span class="text-xs font-medium text-slate-500">Est. Reading Time</span>
+                                            <span id="statReadingTime" class="text-lg font-bold">0 min</span>
+                                        </div>
+                                        <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-100 dark:border-slate-800 flex items-center justify-between">
+                                            <span class="text-xs font-medium text-slate-500">Character Count</span>
+                                            <span id="statChars" class="text-lg font-bold">0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800">
+                                    <div class="flex items-center space-x-2 text-xs text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/30 p-3 rounded-xl border border-indigo-200/50 dark:border-indigo-900/50">
+                                        <i data-lucide="info" class="w-5 h-5 flex-shrink-0"></i>
+                                        <span>Focus on natural phrasing and semantic richness over rigid keyword ratios.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Results Data Table -->
+                        <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm">
+                            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
+                                <div>
+                                    <h3 class="text-lg font-bold">Keyword Frequency Breakdown</h3>
+                                    <p class="text-xs text-slate-500">Detailed count and density percentage for words and phrases</p>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <div class="inline-flex bg-slate-100 dark:bg-slate-950 p-1 rounded-xl border border-slate-200 dark:border-slate-800">
+                                        <button onclick="setPhraseLength(1)" id="btnPhrase1" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-indigo-600 text-white transition-all">1-Word</button>
+                                        <button onclick="setPhraseLength(2)" id="btnPhrase2" class="px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-600 dark:text-slate-400 hover:text-slate-900 transition-all">2-Word</button>
+                                        <button onclick="setPhraseLength(3)" id="btnPhrase3" class="px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-600 dark:text-slate-400 hover:text-slate-900 transition-all">3-Word</button>
+                                    </div>
+                                    <button onclick="copyTableResults()" class="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 transition-colors" title="Copy Table Data">
+                                        <i data-lucide="copy" class="w-4 h-4"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="overflow-x-auto custom-scrollbar">
+                                <table class="w-full text-left border-collapse">
+                                    <thead>
+                                        <tr class="border-b border-slate-200 dark:border-slate-800 text-xs font-semibold text-slate-400 uppercase tracking-wider">
+                                            <th class="py-3 px-4">Keyword / Phrase</th>
+                                            <th class="py-3 px-4">Count</th>
+                                            <th class="py-3 px-4">Density (%)</th>
+                                            <th class="py-3 px-4">Visual Proportion</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="densityTableBody" class="divide-y divide-slate-100 dark:divide-slate-800/60 text-sm">
+                                        <tr><td colspan="4" class="py-8 text-center text-slate-400">Enter text above to generate keyword density report.</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            '/meta-tag-generator': {
+                title: 'Meta Tag Generator & SERP Simulator | RankPulse Pro',
+                description: 'Craft search engine optimized title tags and meta descriptions with live Google search snippet previews and character count safety indicators.',
+                schema: {
+                    "@context": "https://schema.org",
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [
+                        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://rankpulse.pro/#/" },
+                        { "@type": "ListItem", "position": 2, "name": "Meta Tag Generator", "item": "https://rankpulse.pro/#/meta-tag-generator" }
+                    ]
+                },
+                render: () => `
+                    <div class="space-y-6">
+                        <nav class="flex text-xs text-slate-500 space-x-2">
+                            <a href="#/" class="hover:underline">Home</a>
+                            <span>/</span>
+                            <span class="text-indigo-600 dark:text-indigo-400 font-medium">Meta Tag Generator</span>
+                        </nav>
+
+                        <div class="bg-gradient-to-r from-violet-900 via-purple-900 to-indigo-900 rounded-2xl p-6 sm:p-8 text-white shadow-xl">
+                            <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight mb-2">Meta Tag Generator & SERP Simulator</h1>
+                            <p class="text-violet-200 text-sm sm:text-base">Craft search engine optimized title tags and meta descriptions with live Google search snippet previews and character count safety indicators.</p>
+                        </div>
+
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                            <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm space-y-4">
+                                <h3 class="text-lg font-bold mb-4">Meta Details Configuration</h3>
+                                <div>
+                                    <label class="block text-xs font-semibold uppercase tracking-wider text-slate-500 mb-1.5">Page Title</label>
+                                    <input type="text" id="metaTitleInput" oninput="updateMetaPreview()" placeholder="e.g., Ultimate SEO Guide 2026 | RankPulse" class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                                    <div class="flex justify-between items-center mt-1 text-xs">
+                                        <span id="titleCountStatus" class="text-slate-400">0 / 60 characters</span>
+                                        <span id="titleWarning" class="text-emerald-500 font-medium">Optimal length</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold uppercase tracking-wider text-slate-500 mb-1.5">Meta Description</label>
+                                    <textarea id="metaDescInput" rows="4" oninput="updateMetaPreview()" placeholder="Write a compelling meta description that encourages clicks from search result pages..." class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl p-4 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 custom-scrollbar"></textarea>
+                                    <div class="flex justify-between items-center mt-1 text-xs">
+                                        <span id="descCountStatus" class="text-slate-400">0 / 160 characters</span>
+                                        <span id="descWarning" class="text-emerald-500 font-medium">Optimal length</span>
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                                    <div>
+                                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-500 mb-1.5">Target URL Slug</label>
+                                        <input type="text" id="metaUrlInput" oninput="updateMetaPreview()" placeholder="https://example.com/seo-guide" class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-500 mb-1.5">Robots Index Directive</label>
+                                        <select id="metaRobotsInput" class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                                            <option value="index, follow">index, follow (Default)</option>
+                                            <option value="noindex, follow">noindex, follow</option>
+                                            <option value="index, nofollow">index, nofollow</option>
+                                            <option value="noindex, nofollow">noindex, nofollow</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="pt-4">
+                                    <button onclick="generateMetaTagsCode()" class="w-full py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-medium text-sm shadow-lg shadow-indigo-500/25 transition-all flex items-center justify-center space-x-2">
+                                        <i data-lucide="code" class="w-4 h-4"></i>
+                                        <span>Generate HTML Meta Tags</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="space-y-6">
+                                <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm">
+                                    <h3 class="text-base font-bold mb-4 flex items-center space-x-2">
+                                        <i data-lucide="eye" class="w-5 h-5 text-indigo-500"></i>
+                                        <span>Google SERP Snippet Preview</span>
+                                    </h3>
+                                    <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 space-y-1.5">
+                                        <div id="previewUrlDisplay" class="text-xs text-slate-500 truncate">https://example.com/seo-guide</div>
+                                        <div id="previewTitleDisplay" class="text-lg font-medium text-blue-600 dark:text-blue-400 hover:underline cursor-pointer truncate">Ultimate SEO Guide 2026 | RankPulse</div>
+                                        <div id="previewDescDisplay" class="text-xs text-slate-600 dark:text-slate-300 line-clamp-2">Craft search engine optimized title tags and meta descriptions with live Google search snippet previews and character count safety indicators.</div>
+                                    </div>
+                                </div>
+
+                                <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm">
+                                    <div class="flex items-center justify-between mb-3">
+                                        <h3 class="text-base font-bold flex items-center space-x-2">
+                                            <i data-lucide="terminal" class="w-5 h-5 text-indigo-500"></i>
+                                            <span>HTML Header Code</span>
+                                        </h3>
+                                        <button onclick="copyMetaHtml()" class="text-xs font-medium px-3 py-1.5 rounded-lg bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 hover:bg-indigo-100 transition-colors flex items-center space-x-1.5">
+                                            <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+                                            <span>Copy Code</span>
+                                        </button>
+                                    </div>
+                                    <pre id="metaHtmlOutput" class="p-4 rounded-xl bg-slate-900 text-slate-200 text-xs font-mono overflow-x-auto custom-scrollbar"><code>&lt;title&gt;Ultimate SEO Guide 2026 | RankPulse&lt;/title&gt;
+&lt;meta name="description" content="..."&gt;
+&lt;meta name="robots" content="index, follow"&gt;</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            '/readability-checker': {
+                title: 'Readability Score & Word Count Analyzer | RankPulse Pro',
+                description: 'Evaluate your target audience engagement level with Flesch Reading Ease scores, sentence lengths, and syllable distribution analysis.',
+                schema: {
+                    "@context": "https://schema.org",
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [
+                        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://rankpulse.pro/#/" },
+                        { "@type": "ListItem", "position": 2, "name": "Readability Checker", "item": "https://rankpulse.pro/#/readability-checker" }
+                    ]
+                },
+                render: () => `
+                    <div class="space-y-6">
+                        <nav class="flex text-xs text-slate-500 space-x-2">
+                            <a href="#/" class="hover:underline">Home</a>
+                            <span>/</span>
+                            <span class="text-indigo-600 dark:text-indigo-400 font-medium">Readability Checker</span>
+                        </nav>
+
+                        <div class="bg-gradient-to-r from-emerald-900 via-teal-900 to-indigo-900 rounded-2xl p-6 sm:p-8 text-white shadow-xl">
+                            <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight mb-2">Readability Score & Content Metrics</h1>
+                            <p class="text-emerald-200 text-sm sm:text-base">Evaluate your target audience engagement level with Flesch Reading Ease scores, sentence lengths, and syllable distribution analysis.</p>
+                        </div>
+
+                        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                            <div class="lg:col-span-2 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm flex flex-col">
+                                <label class="text-sm font-semibold mb-3 flex items-center space-x-2">
+                                    <i data-lucide="file-text" class="w-4 h-4 text-emerald-500"></i>
+                                    <span>Paste Content for Readability Audit</span>
+                                </label>
+                                <textarea id="readabilityInputText" rows="12" oninput="calculateReadability()" placeholder="Paste your article or copy here to analyze readability grade, sentence complexity, and syllable count..." class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl p-4 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 custom-scrollbar resize-y"></textarea>
+                            </div>
+
+                            <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm flex flex-col justify-between">
+                                <div>
+                                    <h3 class="text-base font-bold mb-4 flex items-center space-x-2">
+                                        <i data-lucide="award" class="w-5 h-5 text-emerald-500"></i>
+                                        <span>Readability Rating</span>
+                                    </h3>
+                                    <div class="text-center p-6 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-100 dark:border-slate-800 mb-6">
+                                        <span id="readabilityScoreVal" class="text-4xl font-extrabold text-emerald-600 dark:text-emerald-400">0</span>
+                                        <div id="readabilityLevelVal" class="text-sm font-semibold text-slate-700 dark:text-slate-300 mt-2">Enter text to evaluate</div>
+                                    </div>
+                                    <div class="space-y-3 text-sm">
+                                        <div class="flex justify-between py-2 border-b border-slate-100 dark:border-slate-800">
+                                            <span class="text-slate-500">Sentence Count</span>
+                                            <span id="readSentencesVal" class="font-bold">0</span>
+                                        </div>
+                                        <div class="flex justify-between py-2 border-b border-slate-100 dark:border-slate-800">
+                                            <span class="text-slate-500">Avg. Words / Sentence</span>
+                                            <span id="readAvgSentenceVal" class="font-bold">0</span>
+                                        </div>
+                                        <div class="flex justify-between py-2 border-b border-slate-100 dark:border-slate-800">
+                                            <span class="text-slate-500">Syllable Count</span>
+                                            <span id="readSyllablesVal" class="font-bold">0</span>
+                                        </div>
+                                        <div class="flex justify-between py-2">
+                                            <span class="text-slate-500">Speaking Time</span>
+                                            <span id="readSpeakTimeVal" class="font-bold">0 min</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            '/site-audit-simulator': {
+                title: 'SEO Site Health Audit Simulator | RankPulse Pro',
+                description: 'Simulate crawling any URL to detect broken links, missing alt tags, SSL certificate status, and overall technical SEO score.',
+                schema: {
+                    "@context": "https://schema.org",
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [
+                        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://rankpulse.pro/#/" },
+                        { "@type": "ListItem", "position": 2, "name": "Site Audit Simulator", "item": "https://rankpulse.pro/#/site-audit-simulator" }
+                    ]
+                },
+                render: () => `
+                    <div class="space-y-6">
+                        <nav class="flex text-xs text-slate-500 space-x-2">
+                            <a href="#/" class="hover:underline">Home</a>
+                            <span>/</span>
+                            <span class="text-indigo-600 dark:text-indigo-400 font-medium">Site Audit Simulator</span>
+                        </nav>
+
+                        <div class="bg-gradient-to-r from-blue-900 via-indigo-900 to-violet-900 rounded-2xl p-6 sm:p-8 text-white shadow-xl">
+                            <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight mb-2">SEO Site Health Audit Simulator</h1>
+                            <p class="text-blue-200 text-sm sm:text-base">Simulate crawling any URL to detect broken links, missing alt tags, SSL certificate status, and overall technical SEO score. (Simulated Tool)</p>
+                        </div>
+
+                        <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm">
+                            <div class="flex flex-col sm:flex-row gap-4 items-center">
+                                <div class="relative flex-grow w-full">
+                                    <i data-lucide="globe" class="absolute left-4 top-3.5 w-5 h-5 text-slate-400"></i>
+                                    <input type="url" id="auditUrlInput" placeholder="https://yourwebsite.com" class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl pl-12 pr-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                                </div>
+                                <button onclick="runSiteAudit()" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-medium text-sm shadow-lg shadow-indigo-500/25 transition-all flex items-center justify-center space-x-2 flex-shrink-0">
+                                    <i data-lucide="play-circle" class="w-4 h-4"></i>
+                                    <span>Run Site Audit Simulator</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div id="auditResultsContainer" class="hidden space-y-6">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                                <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm flex items-center justify-between">
+                                    <div>
+                                        <span class="text-xs font-medium text-slate-500 uppercase">Overall SEO Score</span>
+                                        <h2 id="auditScoreVal" class="text-3xl font-extrabold text-emerald-500 mt-1">94/100</h2>
+                                    </div>
+                                    <div class="h-12 w-12 rounded-xl bg-emerald-50 dark:bg-emerald-950/50 text-emerald-600 flex items-center justify-center"><i data-lucide="award" class="w-6 h-6"></i></div>
+                                </div>
+                                <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm flex items-center justify-between">
+                                    <div>
+                                        <span class="text-xs font-medium text-slate-500 uppercase">Page Load Speed</span>
+                                        <h2 class="text-3xl font-extrabold text-blue-500 mt-1">0.82s</h2>
+                                    </div>
+                                    <div class="h-12 w-12 rounded-xl bg-blue-50 dark:bg-blue-950/50 text-blue-600 flex items-center justify-center"><i data-lucide="zap" class="w-6 h-6"></i></div>
+                                </div>
+                                <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm flex items-center justify-between">
+                                    <div>
+                                        <span class="text-xs font-medium text-slate-500 uppercase">Backlinks Found</span>
+                                        <h2 class="text-3xl font-extrabold text-indigo-500 mt-1">1,482</h2>
+                                    </div>
+                                    <div class="h-12 w-12 rounded-xl bg-indigo-50 dark:bg-indigo-950/50 text-indigo-600 flex items-center justify-center"><i data-lucide="link" class="w-6 h-6"></i></div>
+                                </div>
+                                <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm flex items-center justify-between">
+                                    <div>
+                                        <span class="text-xs font-medium text-slate-500 uppercase">Security & SSL</span>
+                                        <h2 class="text-3xl font-extrabold text-emerald-500 mt-1">Secure</h2>
+                                    </div>
+                                    <div class="h-12 w-12 rounded-xl bg-emerald-50 dark:bg-emerald-950/50 text-emerald-600 flex items-center justify-center"><i data-lucide="shield-check" class="w-6 h-6"></i></div>
+                                </div>
+                            </div>
+
+                            <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm">
+                                <h3 class="text-lg font-bold mb-4">Technical SEO Audit Findings</h3>
+                                <div class="space-y-3">
+                                    <div class="p-4 rounded-xl bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-200/50 dark:border-emerald-900/50 flex items-center justify-between">
+                                        <div class="flex items-center space-x-3">
+                                            <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-600 flex-shrink-0"></i>
+                                            <div>
+                                                <h4 class="text-sm font-semibold text-emerald-900 dark:text-emerald-200">Meta Title & Description Present</h4>
+                                                <p class="text-xs text-emerald-700 dark:text-emerald-400">All pages inspected feature properly formatted tags within recommended length limits.</p>
+                                            </div>
+                                        </div>
+                                        <span class="text-xs font-semibold px-2.5 py-1 bg-emerald-100 dark:bg-emerald-900 text-emerald-700 dark:text-emerald-300 rounded-full">Passed</span>
+                                    </div>
+                                    <div class="p-4 rounded-xl bg-amber-50/50 dark:bg-amber-950/20 border border-amber-200/50 dark:border-amber-900/50 flex items-center justify-between">
+                                        <div class="flex items-center space-x-3">
+                                            <i data-lucide="alert-triangle" class="w-5 h-5 text-amber-600 flex-shrink-0"></i>
+                                            <div>
+                                                <h4 class="text-sm font-semibold text-amber-900 dark:text-amber-200">Image Alt Attributes Missing</h4>
+                                                <p class="text-xs text-amber-700 dark:text-amber-400">2 images were found without descriptive alt text attributes.</p>
+                                            </div>
+                                        </div>
+                                        <span class="text-xs font-semibold px-2.5 py-1 bg-amber-100 dark:bg-amber-900 text-amber-700 dark:text-amber-300 rounded-full">Warning</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            '/guides': {
+                title: 'Professional SEO Guides & Tutorials | RankPulse Pro',
+                description: 'Master organic search engine ranking algorithms with our curated expert tutorials on keyword optimization, semantic search, and link authority.',
+                schema: {
+                    "@context": "https://schema.org",
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [
+                        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://rankpulse.pro/#/" },
+                        { "@type": "ListItem", "position": 2, "name": "SEO Guides", "item": "https://rankpulse.pro/#/guides" }
+                    ]
+                },
+                render: () => `
+                    <div class="space-y-6">
+                        <nav class="flex text-xs text-slate-500 space-x-2">
+                            <a href="#/" class="hover:underline">Home</a>
+                            <span>/</span>
+                            <span class="text-indigo-600 dark:text-indigo-400 font-medium">SEO Guides</span>
+                        </nav>
+
+                        <div class="bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 rounded-2xl p-6 sm:p-8 text-white shadow-xl">
+                            <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight mb-2">Professional SEO Guides & Best Practices</h1>
+                            <p class="text-slate-300 text-sm sm:text-base">Master organic search engine ranking algorithms with our curated expert tutorials on semantic context, structure, and link authority.</p>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <a href="#/guides/semantic-search" class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm flex flex-col justify-between hover:border-indigo-500 transition-all">
+                                <div>
+                                    <div class="h-10 w-10 rounded-xl bg-indigo-50 dark:bg-indigo-950 text-indigo-600 flex items-center justify-center mb-4"><i data-lucide="book-open" class="w-5 h-5"></i></div>
+                                    <h3 class="text-lg font-bold mb-2">Semantic Search & NLP</h3>
+                                    <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Understand how modern search engines like Google evaluate user intent, topical entities, and context over rigid keyword density formulas.</p>
+                                </div>
+                                <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs font-semibold text-indigo-600 dark:text-indigo-400">
+                                    <span>5 min read</span>
+                                    <span>Read Guide &rarr;</span>
+                                </div>
+                            </a>
+
+                            <a href="#/guides/on-page-best-practices" class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm flex flex-col justify-between hover:border-indigo-500 transition-all">
+                                <div>
+                                    <div class="h-10 w-10 rounded-xl bg-violet-50 dark:bg-violet-950 text-violet-600 flex items-center justify-center mb-4"><i data-lucide="zap" class="w-5 h-5"></i></div>
+                                    <h3 class="text-lg font-bold mb-2">On-Page SEO Best Practices</h3>
+                                    <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Discover how to optimize title tags, heading hierarchies (H1, H2, H3), internal anchor text, and user intent alignment.</p>
+                                </div>
+                                <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs font-semibold text-violet-600 dark:text-violet-400">
+                                    <span>8 min read</span>
+                                    <span>Read Guide &rarr;</span>
+                                </div>
+                            </a>
+
+                            <a href="#/guides/avoiding-keyword-stuffing" class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm flex flex-col justify-between hover:border-indigo-500 transition-all">
+                                <div>
+                                    <div class="h-10 w-10 rounded-xl bg-emerald-50 dark:bg-emerald-950 text-emerald-600 flex items-center justify-center mb-4"><i data-lucide="shield-check" class="w-5 h-5"></i></div>
+                                    <h3 class="text-lg font-bold mb-2">Avoiding Keyword Stuffing</h3>
+                                    <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Search engines penalize unnatural keyword repetition. Learn how latent semantic indexing and synonyms improve readability.</p>
+                                </div>
+                                <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs font-semibold text-emerald-600 dark:text-emerald-400">
+                                    <span>4 min read</span>
+                                    <span>Read Guide &rarr;</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                `
+            },
+            '/guides/semantic-search': {
+                title: 'Semantic Search & NLP in Modern SEO | RankPulse Guide',
+                description: 'Explore how search engines use Natural Language Processing and entity salience to rank web pages without relying on outdated keyword stuffing ratios.',
+                schema: {
+                    "@context": "https://schema.org",
+                    "@type": "Article",
+                    "headline": "Semantic Search & NLP in Modern SEO",
+                    "description": "Explore how search engines use Natural Language Processing and entity salience to rank web pages.",
+                    "author": { "@type": "Organization", "name": "RankPulse Pro" }
+                },
+                render: () => `
+                    <div class="max-w-4xl mx-auto space-y-6">
+                        <nav class="flex text-xs text-slate-500 space-x-2">
+                            <a href="#/" class="hover:underline">Home</a>
+                            <span>/</span>
+                            <a href="#/guides" class="hover:underline">SEO Guides</a>
+                            <span>/</span>
+                            <span class="text-indigo-600 dark:text-indigo-400 font-medium">Semantic Search</span>
+                        </nav>
+
+                        <div class="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-8 sm:p-12 shadow-sm space-y-6">
+                            <h1 class="text-3xl font-extrabold">Semantic Search & Natural Language Processing (NLP)</h1>
+                            <p class="text-sm text-slate-500">Published by RankPulse SEO Editorial Team • 5 min read</p>
+                            
+                            <div class="prose dark:prose-invert space-y-4 text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+                                <p>For years, search engine optimization was heavily tied to mathematical keyword percentages (such as maintaining a strict 2% keyword density). However, with the evolution of algorithms like Google Hummingbird, BERT, and MUM, search engines no longer rely on simple word counts.</p>
+                                <h3 class="text-lg font-bold text-slate-900 dark:text-white pt-4">What is Semantic Search?</h3>
+                                <p>Semantic search focuses on understanding the intent and contextual meaning behind a user's query. Instead of matching exact strings, algorithms analyze relationships between entities, concepts, and topical depth.</p>
+                                <h3 class="text-lg font-bold text-slate-900 dark:text-white pt-4">Why Fixed Keyword Density is Obsolete</h3>
+                                <p>There is no universal "ideal" keyword density percentage. Attempting to force exact-match keywords into every paragraph often harms readability and user experience. Instead, creators should focus on comprehensive topic coverage, synonyms, and natural language clarity.</p>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            '/guides/on-page-best-practices': {
+                title: 'On-Page SEO Best Practices for 2026 | RankPulse Guide',
+                description: 'Master heading hierarchies, title optimization, and internal linking structures to maximize your organic search visibility.',
+                schema: {
+                    "@context": "https://schema.org",
+                    "@type": "Article",
+                    "headline": "On-Page SEO Best Practices for 2026",
+                    "description": "Master heading hierarchies, title optimization, and internal linking structures.",
+                    "author": { "@type": "Organization", "name": "RankPulse Pro" }
+                },
+                render: () => `
+                    <div class="max-w-4xl mx-auto space-y-6">
+                        <nav class="flex text-xs text-slate-500 space-x-2">
+                            <a href="#/" class="hover:underline">Home</a>
+                            <span>/</span>
+                            <a href="#/guides" class="hover:underline">SEO Guides</a>
+                            <span>/</span>
+                            <span class="text-indigo-600 dark:text-indigo-400 font-medium">On-Page Best Practices</span>
+                        </nav>
+
+                        <div class="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-8 sm:p-12 shadow-sm space-y-6">
+                            <h1 class="text-3xl font-extrabold">On-Page SEO Best Practices for 2026</h1>
+                            <p class="text-sm text-slate-500">Published by RankPulse SEO Editorial Team • 8 min read</p>
+                            
+                            <div class="prose dark:prose-invert space-y-4 text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+                                <p>On-page SEO involves optimizing individual web pages to rank higher and earn more relevant traffic from search engines. It encompasses both your content and HTML source code.</p>
+                                <h3 class="text-lg font-bold text-slate-900 dark:text-white pt-4">1. Compelling Title Tags & Meta Descriptions</h3>
+                                <p>Your title tag is one of the most critical on-page ranking factors. Keep titles under 60 characters and meta descriptions under 160 characters to ensure full visibility in search result pages.</p>
+                                <h3 class="text-lg font-bold text-slate-900 dark:text-white pt-4">2. Logical Heading Structure (H1, H2, H3)</h3>
+                                <p>Use a single H1 tag for your primary page title, followed by descriptive H2 and H3 subheadings to structure your content logically for both users and search crawlers.</p>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            '/guides/avoiding-keyword-stuffing': {
+                title: 'Avoiding Keyword Stuffing & Optimization Penalties | RankPulse Guide',
+                description: 'Learn why keyword stuffing harms search rankings and how to write natural, engaging copy that satisfies user intent.',
+                schema: {
+                    "@context": "https://schema.org",
+                    "@type": "Article",
+                    "headline": "Avoiding Keyword Stuffing & Optimization Penalties",
+                    "description": "Learn why keyword stuffing harms search rankings and how to write natural copy.",
+                    "author": { "@type": "Organization", "name": "RankPulse Pro" }
+                },
+                render: () => `
+                    <div class="max-w-4xl mx-auto space-y-6">
+                        <nav class="flex text-xs text-slate-500 space-x-2">
+                            <a href="#/" class="hover:underline">Home</a>
+                            <span>/</span>
+                            <a href="#/guides" class="hover:underline">SEO Guides</a>
+                            <span>/</span>
+                            <span class="text-indigo-600 dark:text-indigo-400 font-medium">Avoiding Keyword Stuffing</span>
+                        </nav>
+
+                        <div class="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-8 sm:p-12 shadow-sm space-y-6">
+                            <h1 class="text-3xl font-extrabold">Avoiding Keyword Stuffing & Optimization Penalties</h1>
+                            <p class="text-sm text-slate-500">Published by RankPulse SEO Editorial Team • 4 min read</p>
+                            
+                            <div class="prose dark:prose-invert space-y-4 text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+                                <p>Keyword stuffing refers to the practice of loading a webpage with keywords in an attempt to manipulate search engine rankings. This practice results in a poor user experience and can trigger algorithmic or manual search engine penalties.</p>
+                                <h3 class="text-lg font-bold text-slate-900 dark:text-white pt-4">Best Practices for Natural Writing</h3>
+                                <p>Always write for your human audience first. Use primary keywords naturally in headings and introductions, and rely on contextual synonyms throughout your content.</p>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            '/about': {
+                title: 'About RankPulse Pro - Professional SEO Analytics',
+                description: 'Learn about RankPulse Pro, our mission, and our commitment to empowering creators and marketers with transparent SEO tools.',
+                schema: {
+                    "@context": "https://schema.org",
+                    "@type": "AboutPage",
+                    "name": "About RankPulse Pro"
+                },
+                render: () => `
+                    <div class="max-w-4xl mx-auto space-y-6">
+                        <nav class="flex text-xs text-slate-500 space-x-2">
+                            <a href="#/" class="hover:underline">Home</a>
+                            <span>/</span>
+                            <span class="text-indigo-600 dark:text-indigo-400 font-medium">About</span>
+                        </nav>
+
+                        <div class="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-8 sm:p-12 shadow-sm space-y-6">
+                            <h1 class="text-3xl font-extrabold">About RankPulse Pro</h1>
+                            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                                RankPulse Pro was founded with a singular vision: to make professional-grade SEO analytics and technical auditing tools accessible, fast, and transparent for marketers, agencies, and web creators worldwide.
+                            </p>
+                            <h3 class="text-lg font-bold pt-4">Our Core Values</h3>
+                            <ul class="list-disc pl-5 space-y-2 text-sm text-slate-600 dark:text-slate-300">
+                                <li><strong>Transparency:</strong> No hidden black-box algorithms or unsupported SEO myths.</li>
+                                <li><strong>Performance:</strong> Instant client-side execution for blazing-fast audits.</li>
+                                <li><strong>User Experience:</strong> Clean, modern SaaS design built for maximum productivity.</li>
+                            </ul>
+                        </div>
+                    </div>
+                `
+            },
+            '/contact': {
+                title: 'Contact Support | RankPulse Pro',
+                description: 'Get in touch with the RankPulse Pro support team for inquiries, feedback, or partnership opportunities.',
+                schema: {
+                    "@context": "https://schema.org",
+                    "@type": "ContactPage",
+                    "name": "Contact RankPulse Pro"
+                },
+                render: () => `
+                    <div class="max-w-4xl mx-auto space-y-6">
+                        <nav class="flex text-xs text-slate-500 space-x-2">
+                            <a href="#/" class="hover:underline">Home</a>
+                            <span>/</span>
+                            <span class="text-indigo-600 dark:text-indigo-400 font-medium">Contact</span>
+                        </nav>
+
+                        <div class="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-8 sm:p-12 shadow-sm space-y-6">
+                            <h1 class="text-3xl font-extrabold">Contact Support</h1>
+                            <p class="text-sm text-slate-600 dark:text-slate-300">Have questions or feedback? Fill out the form below and our support team will get back to you within 24 hours.</p>
+                            <form onsubmit="handleContactSubmit(event)" class="space-y-4 pt-4">
+                                <div>
+                                    <label class="block text-xs font-semibold uppercase tracking-wider text-slate-500 mb-1">Your Name</label>
+                                    <input type="text" required class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold uppercase tracking-wider text-slate-500 mb-1">Email Address</label>
+                                    <input type="email" required class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold uppercase tracking-wider text-slate-500 mb-1">Message</label>
+                                    <textarea rows="4" required class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl p-4 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+                                </div>
+                                <button type="submit" class="px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-medium text-sm shadow-lg shadow-indigo-500/25 transition-all">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                `
+            },
+            '/privacy': {
+                title: 'Privacy Policy | RankPulse Pro',
+                description: 'Read the Privacy Policy for RankPulse Pro to understand how we protect and handle your data.',
+                schema: { "@context": "https://schema.org", "@type": "WebPage", "name": "Privacy Policy" },
+                render: () => `
+                    <div class="max-w-4xl mx-auto space-y-6">
+                        <nav class="flex text-xs text-slate-500 space-x-2">
+                            <a href="#/" class="hover:underline">Home</a>
+                            <span>/</span>
+                            <span class="text-indigo-600 dark:text-indigo-400 font-medium">Privacy Policy</span>
+                        </nav>
+                        <div class="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-8 sm:p-12 shadow-sm space-y-6">
+                            <h1 class="text-3xl font-extrabold">Privacy Policy</h1>
+                            <p class="text-sm text-slate-500">Last updated: January 1, 2026</p>
+                            <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">At RankPulse Pro, your privacy is our top priority. All text analysis, keyword checks, and meta tag generators run entirely client-side within your browser. We do not store or transmit your analytical text data to external servers.</p>
+                        </div>
+                    </div>
+                `
+            },
+            '/terms': {
+                title: 'Terms of Service | RankPulse Pro',
+                description: 'Review the Terms of Service governing the use of RankPulse Pro SEO tools and website.',
+                schema: { "@context": "https://schema.org", "@type": "WebPage", "name": "Terms of Service" },
+                render: () => `
+                    <div class="max-w-4xl mx-auto space-y-6">
+                        <nav class="flex text-xs text-slate-500 space-x-2">
+                            <a href="#/" class="hover:underline">Home</a>
+                            <span>/</span>
+                            <span class="text-indigo-600 dark:text-indigo-400 font-medium">Terms of Service</span>
+                        </nav>
+                        <div class="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-8 sm:p-12 shadow-sm space-y-6">
+                            <h1 class="text-3xl font-extrabold">Terms of Service</h1>
+                            <p class="text-sm text-slate-500">Last updated: January 1, 2026</p>
+                            <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">By accessing or using RankPulse Pro, you agree to be bound by these Terms of Service. All tools are provided on an as-is basis for professional SEO analysis and educational purposes.</p>
+                        </div>
+                    </div>
+                `
+            }
+        };
+
+        function router() {
+            let hash = window.location.hash.slice(1) || '/';
+            if (!routes[hash]) {
+                hash = '/';
+            }
+
+            const route = routes[hash];
+            document.title = route.title;
+            const metaDesc = document.querySelector('meta[name="description"]');
+            if (metaDesc) metaDesc.setAttribute('content', route.description);
+            
+            if (route.schema) {
+                document.getElementById('jsonLdSchema').innerText = JSON.stringify(route.schema, null, 2);
+            }
+
+            document.getElementById('mainViewContainer').innerHTML = route.render();
+
+            // Update Active Navigation state
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('text-indigo-600', 'dark:text-indigo-400', 'bg-indigo-50', 'dark:bg-indigo-950/50');
+                link.classList.add('text-slate-600', 'dark:text-slate-400');
+                if (link.dataset.route === hash.replace('/', '')) {
+                    link.classList.remove('text-slate-600', 'dark:text-slate-400');
+                    link.classList.add('text-indigo-600', 'dark:text-indigo-400', 'bg-indigo-50', 'dark:bg-indigo-950/50');
+                }
+            });
+
+            const mobileSelect = document.getElementById('mobileNavSelect');
+            if (mobileSelect) mobileSelect.value = hash;
+
+            lucide.createIcons();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            // Initialize tool-specific data if on tool routes
+            if (hash === '/keyword-density-checker') {
+                loadSampleText();
+            }
+        }
+
+        window.addEventListener('hashchange', router);
+        document.addEventListener('DOMContentLoaded', () => {
+            if (!window.location.hash) {
+                window.location.hash = '/';
+            }
+            router();
+        });
+
+        // Keyword Density Analyzer Logic
+        function setPhraseLength(len) {
+            currentPhraseLength = len;
+            for(let i=1; i<=3; i++) {
+                const btn = document.getElementById('btnPhrase' + i);
+                if(btn) {
+                    if(i === len) {
+                        btn.className = "px-3 py-1.5 rounded-lg text-xs font-semibold bg-indigo-600 text-white transition-all";
+                    } else {
+                        btn.className = "px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-600 dark:text-slate-400 hover:text-slate-900 transition-all";
+                    }
+                }
+            }
+            analyzeKeywordDensity();
+        }
+
+        function loadSampleText() {
+            const sample = "Search engine optimization (SEO) is the practice of increasing the quantity and quality of traffic to your website through organic search engine results. Modern search engines rely on semantic context, user intent, and topical authority rather than rigid keyword percentages. By maintaining clear heading structures, comprehensive entity coverage, and high-quality meta tags, you can maximize your organic visibility.";
+            const textarea = document.getElementById('densityInputText');
+            if(textarea) {
+                textarea.value = sample;
+                analyzeKeywordDensity();
+            }
+        }
+
+        function clearDensityTool() {
+            const textarea = document.getElementById('densityInputText');
+            if(textarea) {
+                textarea.value = '';
+                analyzeKeywordDensity();
+            }
+        }
+
+        function analyzeKeywordDensity() {
+            const textarea = document.getElementById('densityInputText');
+            if(!textarea) return;
+            const text = textarea.value.trim();
+            const filterActive = document.getElementById('filterStopWords')?.checked ?? true;
+            
+            if(!text) {
+                document.getElementById('liveWordCountBadge').innerText = '0 words';
+                document.getElementById('statTotalWords').innerText = '0';
+                document.getElementById('statUniqueWords').innerText = '0';
+                document.getElementById('statReadingTime').innerText = '0 min';
+                document.getElementById('statChars').innerText = '0';
+                document.getElementById('densityTableBody').innerHTML = '<tr><td colspan="4" class="py-8 text-center text-slate-400">Enter text above to generate keyword density report.</td></tr>';
+                return;
+            }
+
+            const words = text.toLowerCase().replace(/[^\w\s]/gi, '').split(/\s+/).filter(w => w.length > 0);
+            const totalWords = words.length;
+            const charCount = text.length;
+            const readingTime = Math.ceil(totalWords / 200);
+
+            document.getElementById('liveWordCountBadge').innerText = totalWords + ' words';
+            document.getElementById('statTotalWords').innerText = totalWords;
+            document.getElementById('statChars').innerText = charCount;
+            document.getElementById('statReadingTime').innerText = readingTime + ' min';
+
+            let phrases = [];
+            if(currentPhraseLength === 1) {
+                phrases = words.filter(w => !filterActive || !stopWords.has(w));
+            } else {
+                for(let i=0; i<=words.length - currentPhraseLength; i++) {
+                    const chunk = words.slice(i, i + currentPhraseLength);
+                    if(filterActive && (stopWords.has(chunk[0]) || stopWords.has(chunk[chunk.length-1]))) {
+                        continue;
+                    }
+                    phrases.push(chunk.join(' '));
+                }
+            }
+
+            document.getElementById('statUniqueWords').innerText = new Set(phrases).size;
+
+            const counts = {};
+            phrases.forEach(p => { counts[p] = (counts[p] || 0) + 1; });
+
+            analysisData = Object.keys(counts).map(k => ({
+                keyword: k,
+                count: counts[k],
+                density: ((counts[k] / phrases.length) * 100).toFixed(2)
+            })).sort((a,b) => b.count - a.count);
+
+            renderDensityTable();
+        }
+
+        function renderDensityTable() {
+            const tbody = document.getElementById('densityTableBody');
+            if(!tbody) return;
+            if(analysisData.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="4" class="py-8 text-center text-slate-400">No matching keywords found.</td></tr>';
+                return;
+            }
+
+            let html = '';
+            const maxCount = analysisData[0].count || 1;
+
+            analysisData.slice(0, 15).forEach(item => {
+                const proportion = Math.min(100, (item.count / maxCount) * 100);
+                html += `
+                    <tr class="hover:bg-slate-50 dark:hover:bg-slate-950/50 transition-colors">
+                        <td class="py-3.5 px-4 font-semibold text-slate-700 dark:text-slate-200">${item.keyword}</td>
+                        <td class="py-3.5 px-4 text-slate-600 dark:text-slate-400">${item.count}</td>
+                        <td class="py-3.5 px-4 font-bold text-indigo-600 dark:text-indigo-400">${item.density}%</td>
+                        <td class="py-3.5 px-4 w-1/3">
+                            <div class="flex items-center space-x-3">
+                                <div class="flex-grow bg-slate-100 dark:bg-slate-800 h-2 rounded-full overflow-hidden">
+                                    <div class="bg-indigo-600 h-full rounded-full" style="width: ${proportion}%"></div>
+                                </div>
+                                <span class="text-xs text-slate-400 w-10 text-right">${item.density}%</span>
+                            </div>
+                        </td>
+                    </tr>
+                `;
+            });
+            tbody.innerHTML = html;
+        }
+
+        // Meta Tag Generator Logic
+        function updateMetaPreview() {
+            const titleInput = document.getElementById('metaTitleInput');
+            if(!titleInput) return;
+            const title = titleInput.value || 'Ultimate SEO Guide 2026 | RankPulse';
+            const desc = document.getElementById('metaDescInput').value || 'Craft search engine optimized title tags and meta descriptions with live Google search snippet previews.';
+            const url = document.getElementById('metaUrlInput').value || 'https://example.com/seo-guide';
+            const robots = document.getElementById('metaRobotsInput').value;
+
+            document.getElementById('previewTitleDisplay').innerText = title;
+            document.getElementById('previewDescDisplay').innerText = desc;
+            document.getElementById('previewUrlDisplay').innerText = url;
+
+            const titleLen = title.length;
+            const descLen = desc.length;
+
+            const titleCountEl = document.getElementById('titleCountStatus');
+            const titleWarnEl = document.getElementById('titleWarning');
+            titleCountEl.innerText = titleLen + ' / 60 characters';
+            if(titleLen > 60) {
+                titleWarnEl.innerText = 'Too long (Max 60)';
+                titleWarnEl.className = "text-rose-500 font-medium";
+            } else if(titleLen < 30) {
+                titleWarnEl.innerText = 'Too short';
+                titleWarnEl.className = "text-amber-500 font-medium";
+            } else {
+                titleWarnEl.innerText = 'Optimal length';
+                titleWarnEl.className = "text-emerald-500 font-medium";
+            }
+
+            const descCountEl = document.getElementById('descCountStatus');
+            const descWarnEl = document.getElementById('descWarning');
+            descCountEl.innerText = descLen + ' / 160 characters';
+            if(descLen > 160) {
+                descWarnEl.innerText = 'Too long (Max 160)';
+                descWarnEl.className = "text-rose-500 font-medium";
+            } else if(descLen < 70) {
+                descWarnEl.innerText = 'Too short';
+                descWarnEl.className = "text-amber-500 font-medium";
+            } else {
+                descWarnEl.innerText = 'Optimal length';
+                descWarnEl.className = "text-emerald-500 font-medium";
+            }
+
+            const htmlCode = `<title>${title}</title>\n<meta name="description" content="${desc}">\n<meta name="robots" content="${robots}">`;
+            document.getElementById('metaHtmlOutput').querySelector('code').innerText = htmlCode;
+        }
+
+        function generateMetaTagsCode() {
+            updateMetaPreview();
+            showToast('Meta tags successfully generated!');
+        }
+
+        function copyMetaHtml() {
+            const code = document.getElementById('metaHtmlOutput').innerText;
+            const textarea = document.createElement('textarea');
+            textarea.value = code;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+            showToast('HTML meta tags copied to clipboard!');
+        }
+
+        // Readability Calculator
+        function calculateReadability() {
+            const textarea = document.getElementById('readabilityInputText');
+            if(!textarea) return;
+            const text = textarea.value.trim();
+            if(!text) {
+                document.getElementById('readabilityScoreVal').innerText = '0';
+                document.getElementById('readabilityLevelVal').innerText = 'Enter text to evaluate';
+                document.getElementById('readSentencesVal').innerText = '0';
+                document.getElementById('readAvgSentenceVal').innerText = '0';
+                document.getElementById('readSyllablesVal').innerText = '0';
+                document.getElementById('readSpeakTimeVal').innerText = '0 min';
+                return;
+            }
+
+            const words = text.split(/\s+/).filter(w => w.length > 0);
+            const wordCount = words.length;
+            const sentences = text.split(/[.!?]+/).filter(s => s.trim().length > 0).length || 1;
+            const avgWordsPerSentence = (wordCount / sentences).toFixed(1);
+            
+            let syllableCount = 0;
+            words.forEach(w => {
+                syllableCount += Math.max(1, w.toLowerCase().replace(/[^aeiouy]/g, '').length);
+            });
+
+            const score = Math.max(0, Math.min(100, Math.round(206.835 - (1.015 * (wordCount / sentences)) - (84.6 * (syllableCount / wordCount)))));
+            
+            let level = 'College Graduate';
+            if(score > 90) level = 'Very Easy (5th Grade)';
+            else if(score > 80) level = 'Easy (6th Grade)';
+            else if(score > 70) level = 'Fairly Easy (7th Grade)';
+            else if(score > 60) level = 'Standard (8th-9th Grade)';
+            else if(score > 50) level = 'Fairly Difficult (High School)';
+            else if(score > 30) level = 'Difficult (College)';
+
+            document.getElementById('readabilityScoreVal').innerText = score;
+            document.getElementById('readabilityLevelVal').innerText = level;
+            document.getElementById('readSentencesVal').innerText = sentences;
+            document.getElementById('readAvgSentenceVal').innerText = avgWordsPerSentence;
+            document.getElementById('readSyllablesVal').innerText = syllableCount;
+            document.getElementById('readSpeakTimeVal').innerText = Math.ceil(wordCount / 130) + ' min';
+        }
+
+        // Site Audit Simulator
+        function runSiteAudit() {
+            const urlInput = document.getElementById('auditUrlInput');
+            if(!urlInput || !urlInput.value.trim()) {
+                showToast('Please enter a valid website URL.');
+                return;
+            }
+            showToast('Simulating technical site health audit...');
+            setTimeout(() => {
+                document.getElementById('auditResultsContainer').classList.remove('hidden');
+                showToast('Audit complete!');
+            }, 800);
+        }
+
+        // Modal & Toast Helpers
+        function openExportModal() {
+            document.getElementById('exportModal').classList.remove('hidden');
+            document.getElementById('exportModal').classList.add('flex');
+        }
+
+        function closeExportModal() {
+            document.getElementById('exportModal').classList.add('hidden');
+            document.getElementById('exportModal').classList.remove('flex');
+        }
+
+        function exportReportFile(format) {
+            closeExportModal();
+            showToast(`Report successfully exported as ${format.toUpperCase()}!`);
+        }
+
+        function copyTableResults() {
+            if(analysisData.length === 0) {
+                showToast('No keyword data available to copy.');
+                return;
+            }
+            let text = 'Keyword\tCount\tDensity (%)\n';
+            analysisData.forEach(item => {
+                text += `${item.keyword}\t${item.count}\t${item.density}%\n`;
+            });
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+            showToast('Keyword density table copied to clipboard!');
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toastNotification');
+            document.getElementById('toastMessage').innerText = msg;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 3500);
+        }
+
+        function handleNewsletterSubmit(e) {
+            e.preventDefault();
+            e.target.reset();
+            showToast('Successfully subscribed to RankPulse SEO Weekly Insights!');
+        }
+
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            e.target.reset();
+            showToast('Message sent successfully! We will get back to you soon.');
+        }
+    </script>
+</body>
+</html>
